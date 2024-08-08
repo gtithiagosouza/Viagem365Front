@@ -7,18 +7,15 @@ const LoginPage = () => {
     const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
     async function onSubmit(dados) {
-        console.log("Dados do formulário:", dados);
         try {
             const response = await fetch('http://localhost:3000/users');
             const data = await response.json();
-            console.log("Resposta do servidor JSON:", data);
             const user = data.find(user => user.email === dados.email && user.password === dados.password);
 
             if (user) {
-                console.log("Login bem-sucedido");
                 navigate('/dashboard');
             } else {
-                throw new Error("Credenciais inválidas");
+                throw new Error("Email/Senha inválidos");
             }
         } catch (error) {
             console.error("Erro na autenticação:", error.message);
