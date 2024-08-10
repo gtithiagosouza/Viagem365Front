@@ -1,55 +1,52 @@
 import { Link } from 'react-router-dom';
-import styles from './LoginPage.module.css';
-
-
-
-
+import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
-    return (
-        <main className={styles.container}>
-            <div className={styles.formSignin}>
-                <form>
-                    <img 
-                        className="mb-4" 
-                        src="" 
-                        alt="lab 365"  
-                        height="200" 
-                    />
-                    <h1 className="h3 mb-3 fw-normal">Efetuar login</h1>
-                    <div className="form-floating">
-                        <input 
-                            type="email" 
-                            className="form-control" 
-                            id="floatingInput" 
-                            placeholder="name@example.com" 
-                        />
-                        <label htmlFor="floatingInput">Email address</label>
-                    </div>
-                    <div className="form-floating">
-                        <input 
-                            type="password" 
-                            className="form-control" 
-                            id="floatingPassword" 
-                            placeholder="Password" 
-                        />
-                        <label htmlFor="floatingPassword">Password</label>
-                    </div>
+    // Dados simulados
+    const locais = [
+        { id: 1, nome: 'Local 1' },
+        { id: 2, nome: 'Local 2' },
+        { id: 3, nome: 'Local 3' },
+        { id: 4, nome: 'Local 4' },
+        { id: 5, nome: 'Local 5' },
+    ];
 
-                    <div className="form-check text-start my-3">
-                        <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
-                        <label className="form-check-label" htmlFor="flexCheckDefault">
-                            Remember me
-                        </label>
+    const quantidadeUsuarios = 150; // Número simulado
+    const quantidadeLocais = 25; // Número simulado
+
+    return (
+        <div className={styles.dashboardContainer}>
+            <aside className={styles.sidebar}>
+                <nav>
+                    <ul>
+                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        <li><Link to="/usuarios">Usuarios</Link></li>
+                        <li><Link to="/locais">Locais</Link></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main className={styles.mainContent}>
+                <h1>Dashboard</h1>
+                <div className={styles.cards}>
+                    <div className={`${styles.card} ${styles.cardPrimary}`}>
+                        <h2>{quantidadeUsuarios}</h2>
+                        <p>Usuarios</p>
                     </div>
-                    <button className="btn btn-primary w-100 py-2" type="submit">Entrar</button>
-                    <p className="mt-5 mb-3 text-body-secondary">Viagem365 &copy; 2024</p>
-                    <p>
-                        Não possui cadastro? <Link to="/cadastro">Cadastra-se</Link> 
-                    </p>
-                </form>
-            </div>
-        </main>
+                    <div className={`${styles.card} ${styles.cardSecondary}`}>
+                        <h2>{quantidadeLocais}</h2>
+                        <p>Locais</p>
+                    </div>
+                </div>
+                <section className={styles.lastLocais}>
+                    <h2>Últimos 5 Locais</h2>
+                    <ul>
+                        {locais.map(local => (
+                            <li key={local.id}>{local.nome}</li>
+                        ))}
+                    </ul>
+                </section>
+            </main>
+        </div>
     );
 };
 
