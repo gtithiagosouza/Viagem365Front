@@ -1,6 +1,27 @@
 {
   "users": [
-    { "id": 1, "email": "john@example.com", "password": "123456" },
-    { "id": 2, "email": "jane@example.com", "password": "abcdef" }
+    {
+      "id": 1,
+      "email": "john@example.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "email": "jane@example.com",
+      "password": "abcdef"
+    },
+     {
+      "nome": "dsadas",
+      "sexo": "Feminino",
+      "cpf": "05318496",
+      "dataNascimento": "1985-02-02",
+      "email": "thiagoo@gmail.com",
+      "password": "123",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 4
+    }
   ]
 }
