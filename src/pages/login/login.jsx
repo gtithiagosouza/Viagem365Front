@@ -75,7 +75,7 @@ const LoginPage = () => {
                     <button className="btn btn-primary w-100 py-2" type="submit" disabled={isSubmitting}>{isSubmitting ? 'Carregando...': 'Entrar'}</button>
                     <p className="mt-5 mb-3 text-body-secondary">Viagem365 &copy; 2024</p>
                     <p>
-                        Não possui cadastro? <Link to="/cadastro">Cadastra-se</Link> 
+                        Não possui cadastro? <Link to="/usuarios">Cadastra-se</Link> 
                     </p>
                 </form>
             </div>

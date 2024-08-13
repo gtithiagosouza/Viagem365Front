@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Cadastro.module.css';
 
 const Cadastro = () => {
@@ -38,7 +39,21 @@ const Cadastro = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         try {
+            // Verifica se o CPF ou o email já estão cadastrados
+            const response = await fetch('http://localhost:3000/users');
+            const users = await response.json();
+
+            const cpfExists = users.some(user => user.cpf === formData.cpf);
+            const emailExists = users.some(user => user.email === formData.email);
+
+            if (cpfExists || emailExists) {
+                alert('CPF ou Email já cadastrados.');
+                return; // Impede o envio do formulário
+            }
+
+            // Se CPF e email forem únicos, prosseguir com o cadastro
             await fetch('http://localhost:3000/users', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -50,6 +65,7 @@ const Cadastro = () => {
         }
     };
 
+
     return (
         <div className={styles.cadastroContainer}>
             <aside className={styles.sidebar}>
@@ -58,7 +74,7 @@ const Cadastro = () => {
                         <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="/usuarios">Usuarios</a></li>
                         <li><a href="/locais">Locais</a></li>
-                        
+                        <li><Link to="/">Sair</Link></li>
                     </ul>
                 </nav>
             </aside>

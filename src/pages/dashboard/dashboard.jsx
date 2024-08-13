@@ -1,18 +1,43 @@
 import { Link } from 'react-router-dom';
 import styles from './Dashboard.module.css';
+import { useState, useEffect } from 'react';
 
 const Dashboard = () => {
-    // Dados simulados
-    const locais = [
-        { id: 1, nome: 'Local 1' },
-        { id: 2, nome: 'Local 2' },
-        { id: 3, nome: 'Local 3' },
-        { id: 4, nome: 'Local 4' },
-        { id: 5, nome: 'Local 5' },
-    ];
+    const [locais, setLocais] = useState([]);
+    const [users, setUsers] = useState([]);
 
-    const quantidadeUsuarios = 150; // Número simulado
-    const quantidadeLocais = 25; // Número simulado
+    async function buscarLocais() {
+        try {
+            const response = await fetch('http://localhost:3000/locais');
+            if (response.ok) {
+                const data = await response.json();
+                setLocais(data);
+            } else {
+                console.error("Locais não encontrados");
+            }
+        } catch (error) {
+            console.error("Erro ao buscar locais", error);
+        }
+    }
+
+    async function buscarUsuarios() {
+        try {
+            const response = await fetch('http://localhost:3000/users');
+            if (response.ok) {
+                const data = await response.json();
+                setUsers(data);
+            } else {
+                console.error("Usuários não encontrados");
+            }
+        } catch (error) {
+            console.error("Erro ao buscar usuários", error);
+        }
+    }
+
+    useEffect(() => {
+        buscarLocais();
+        buscarUsuarios();
+    }, []); 
 
     return (
         <div className={styles.dashboardContainer}>
@@ -22,6 +47,7 @@ const Dashboard = () => {
                         <li><Link to="/dashboard">Dashboard</Link></li>
                         <li><Link to="/usuarios">Usuarios</Link></li>
                         <li><Link to="/locais">Locais</Link></li>
+                        <li><Link to="/">Sair</Link></li>
                     </ul>
                 </nav>
             </aside>
@@ -29,21 +55,33 @@ const Dashboard = () => {
                 <h1>Dashboard</h1>
                 <div className={styles.cards}>
                     <div className={`${styles.card} ${styles.cardPrimary}`}>
-                        <h2>{quantidadeUsuarios}</h2>
+                        <h2>{users.length}</h2>
                         <p>Usuarios</p>
                     </div>
                     <div className={`${styles.card} ${styles.cardSecondary}`}>
-                        <h2>{quantidadeLocais}</h2>
+                        <h2>{locais.length}</h2>
                         <p>Locais</p>
                     </div>
                 </div>
-                <section className={styles.lastLocais}>
-                    <h2>Últimos 5 Locais</h2>
-                    <ul>
-                        {locais.map(local => (
-                            <li key={local.id}>{local.nome}</li>
-                        ))}
-                    </ul>
+                <section className={styles.tableContainer}>
+                     <table>
+                        <thead>
+                            <tr>
+                                <th>Últimos Locais</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {locais.slice(-5).map((local, index) => (
+                                <tr key={index}>
+                                    <td>{local.nomeLocal}</td>
+                                    <td>{local.latitude}</td>
+                                    <td>{local.longitude}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </section>
             </main>
         </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './CadastroLocais.module.css';
 
 const CadastroLocais = () => {
@@ -64,6 +65,7 @@ const CadastroLocais = () => {
                         <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="/usuarios">Usuários</a></li>
                         <li><a href="/locais">Locais</a></li>
+                        <li><Link to="/">Sair</Link></li>
                     </ul>
                 </nav>
             </aside>

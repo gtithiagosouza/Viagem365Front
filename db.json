@@ -35,6 +35,71 @@
       "latitude": "-27.62778",
       "longitude": "-48.63822",
       "id": 5
+    },
+    {
+      "nome": "Maria",
+      "sexo": "Feminino",
+      "cpf": "88888888",
+      "dataNascimento": "1985-02-02",
+      "email": "maria@maria.com.br",
+      "password": "123",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 6
+    },
+    {
+      "nome": "Thiago Souza",
+      "sexo": "Masculino",
+      "cpf": "123456789",
+      "dataNascimento": "2020-02-02",
+      "email": "thiago@gmail.com",
+      "password": "123",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 7
+    },
+    {
+      "nome": "Thiago Souza",
+      "sexo": "Masculino",
+      "cpf": "123456789",
+      "dataNascimento": "2020-02-02",
+      "email": "thiago@gmail.com",
+      "password": "123",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 8
+    },
+    {
+      "nome": "Thiago Souza",
+      "sexo": "Masculino",
+      "cpf": "123456788",
+      "dataNascimento": "1985-02-02",
+      "email": "thiagooo@gmail.com",
+      "password": "123",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 9
+    },
+    {
+      "nome": "Thiago Souza",
+      "sexo": "Masculino",
+      "cpf": "1234567886",
+      "dataNascimento": "1985-02-02",
+      "email": "thiago6oo@gmail.com",
+      "password": "123",
+      "cep": "881040056",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 10
     }
   ],
   "locais": [
@@ -67,6 +132,26 @@
       "latitude": "-27.62778",
       "longitude": "-48.63822",
       "id": 3
+    },
+    {
+      "nomeLocal": "Canasvieira",
+      "descricaoLocal": "Muito argentino",
+      "identificadorUsuario": "3",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 4
+    },
+    {
+      "nomeLocal": "Mar do Sertão",
+      "descricaoLocal": "Muito lindo",
+      "identificadorUsuario": "4",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 5
     }
   ]
 }
