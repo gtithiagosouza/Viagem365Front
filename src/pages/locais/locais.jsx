@@ -64,7 +64,6 @@ const CadastroLocais = () => {
                         <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="/usuarios">Usuários</a></li>
                         <li><a href="/locais">Locais</a></li>
-                        <li><a href="/cadastro-locais">Cadastro Locais</a></li>
                     </ul>
                 </nav>
             </aside>

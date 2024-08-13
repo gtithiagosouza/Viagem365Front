@@ -22,6 +22,19 @@
       "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
       "latitude": "-27.62369",
       "longitude": "-48.63296"
+    },
+    {
+      "nome": "Pedro Antonio",
+      "sexo": "Feminino",
+      "cpf": "11111111111111",
+      "dataNascimento": "1950-03-31",
+      "email": "pedro@gmail.com",
+      "password": "123",
+      "cep": "88104000",
+      "endereco": "Rua Frederico Afonso, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62778",
+      "longitude": "-48.63822",
+      "id": 5
     }
   ],
   "locais": [
@@ -44,6 +57,16 @@
       "latitude": "-27.62369",
       "longitude": "-48.63296",
       "id": 2
+    },
+    {
+      "nomeLocal": "Maria do Mar",
+      "descricaoLocal": "Pedra Grand",
+      "identificadorUsuario": "4",
+      "cep": "88104000",
+      "endereco": "Rua Frederico Afonso, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62778",
+      "longitude": "-48.63822",
+      "id": 3
     }
   ]
 }
