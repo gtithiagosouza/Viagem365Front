@@ -41,7 +41,7 @@ const Cadastro = () => {
         e.preventDefault();
 
         try {
-            // Verifica se o CPF ou o email já estão cadastrados
+           
             const response = await fetch('http://localhost:3000/users');
             const users = await response.json();
 
@@ -50,10 +50,10 @@ const Cadastro = () => {
 
             if (cpfExists || emailExists) {
                 alert('CPF ou Email já cadastrados.');
-                return; // Impede o envio do formulário
+                return; 
             }
 
-            // Se CPF e email forem únicos, prosseguir com o cadastro
+           
             await fetch('http://localhost:3000/users', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -72,7 +72,7 @@ const Cadastro = () => {
                 <nav>
                     <ul>
                         <li><a href="/dashboard">Dashboard</a></li>
-                        <li><a href="/usuarios">Usuarios</a></li>
+                        <li><a href="/usuarios">Usuários</a></li>
                         <li><a href="/locais">Locais</a></li>
                         <li><Link to="/">Sair</Link></li>
                     </ul>
@@ -165,7 +165,7 @@ const Cadastro = () => {
                             readOnly 
                         />
                     </div>
-                    <div className={styles.formGroup}>
+                   {/*  <div className={styles.formGroup}>
                         <label>Latitude:</label>
                         <input 
                             type="text" 
@@ -184,7 +184,7 @@ const Cadastro = () => {
                             onChange={handleInputChange} 
                             readOnly 
                         />
-                    </div>
+                    </div> */}
                     <button type="submit" className={styles.submitButton}>Cadastrar</button>
                 </form>
             </main>

@@ -31,7 +31,7 @@ const LoginPage = () => {
                         className="mb-4" 
                         src="https://abracomex.org/wp-content/uploads/2017/07/n120140312143408.jpg" 
                         alt="lab 365"  
-                        height="200" 
+                        height="180" 
                     />
                     <h1 className="h3 mb-3 fw-normal">Efetuar login</h1>
                     <div className="form-floating">
@@ -73,7 +73,7 @@ const LoginPage = () => {
                         </label>
                     </div>
                     <button className="btn btn-primary w-100 py-2" type="submit" disabled={isSubmitting}>{isSubmitting ? 'Carregando...': 'Entrar'}</button>
-                    <p className="mt-5 mb-3 text-body-secondary">Viagem365 &copy; 2024</p>
+                 
                     <p>
                         Não possui cadastro? <Link to="/usuarios">Cadastra-se</Link> 
                     </p>

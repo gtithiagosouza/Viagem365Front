@@ -45,8 +45,9 @@ const Dashboard = () => {
                 <nav>
                     <ul>
                         <li><Link to="/dashboard">Dashboard</Link></li>
-                        <li><Link to="/usuarios">Usuarios</Link></li>
+                        <li><Link to="/usuarios">Usuários</Link></li>
                         <li><Link to="/locais">Locais</Link></li>
+                        <li><Link to="/editdeletlocais">Listagem Locais</Link></li>
                         <li><Link to="/">Sair</Link></li>
                     </ul>
                 </nav>

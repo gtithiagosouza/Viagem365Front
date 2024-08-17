@@ -100,58 +100,30 @@
       "latitude": "-27.62369",
       "longitude": "-48.63296",
       "id": 10
+    },
+    {
+      "nome": "oiiiii",
+      "sexo": "Masculino",
+      "cpf": "8888888888888888888888888888",
+      "dataNascimento": "1985-02-02",
+      "email": "thiagooooooooooooooo@gmail.com",
+      "password": "123",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 11
     }
   ],
   "locais": [
     {
-      "id": 1,
-      "nomeLocal": "Biblioteca Central",
-      "descricaoLocal": "Uma grande biblioteca com milhares de livros.",
-      "identificadorUsuario": 1,
-      "cep": "01001000",
-      "endereco": "Praça da Sé, Sé, São Paulo - SP",
-      "latitude": "-23.5505",
-      "longitude": "-46.6333"
-    },
-    {
-      "nomeLocal": "Praia do cagao",
-      "descricaoLocal": "Praiaa",
-      "identificadorUsuario": "4",
-      "cep": "88104005",
+      "nomeLocal": "oiiii",
+      "descricaoLocal": "oiii",
       "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
       "latitude": "-27.62369",
       "longitude": "-48.63296",
-      "id": 2
-    },
-    {
-      "nomeLocal": "Maria do Mar",
-      "descricaoLocal": "Pedra Grand",
-      "identificadorUsuario": "4",
-      "cep": "88104000",
-      "endereco": "Rua Frederico Afonso, Fazenda Santo Antônio, São José - SC",
-      "latitude": "-27.62778",
-      "longitude": "-48.63822",
-      "id": 3
-    },
-    {
-      "nomeLocal": "Canasvieira",
-      "descricaoLocal": "Muito argentino",
-      "identificadorUsuario": "3",
       "cep": "88104005",
-      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
-      "latitude": "-27.62369",
-      "longitude": "-48.63296",
-      "id": 4
-    },
-    {
-      "nomeLocal": "Mar do Sertão",
-      "descricaoLocal": "Muito lindo",
-      "identificadorUsuario": "4",
-      "cep": "88104005",
-      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
-      "latitude": "-27.62369",
-      "longitude": "-48.63296",
-      "id": 5
+      "id": 1
     }
   ]
 }
