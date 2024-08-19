@@ -137,6 +137,32 @@
       "cep": "11111111",
       "endereco": "undefined, undefined, undefined - undefined",
       "id": 13
+    },
+    {
+      "nome": "Thiago",
+      "sexo": "Masculino",
+      "cpf": "888888888888",
+      "dataNascimento": "1985-02-02",
+      "email": "thiagolab@gmail.com",
+      "password": "123456",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 14
+    },
+    {
+      "nome": "Thiago",
+      "sexo": "Masculino",
+      "cpf": "11111111",
+      "dataNascimento": "1985-02-02",
+      "email": "thiagolabbbb@gmail.com",
+      "password": "123",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 15
     }
   ],
   "locais": [
