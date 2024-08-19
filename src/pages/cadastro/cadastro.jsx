@@ -32,7 +32,7 @@ const Cadastro = () => {
                     longitude: data.lng
                 });
             } catch (error) {
-                console.error('Erro ao buscar o endereço:', error);
+                console.error('Erro ao localizar o endereço:', error);
             }
         }
     };
@@ -70,10 +70,11 @@ const Cadastro = () => {
         <div className={styles.cadastroContainer}>
             <aside className={styles.sidebar}>
                 <nav>
-                    <ul>
-                        <li><a href="/dashboard">Dashboard</a></li>
-                        <li><a href="/usuarios">Usuários</a></li>
-                        <li><a href="/locais">Locais</a></li>
+                <ul>
+                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        <li><Link to="/usuarios">Usuários</Link></li>
+                        <li><Link to="/locais">Locais</Link></li>
+                        <li><Link to="/editdeletlocais">Listagem Locais</Link></li>
                         <li><Link to="/">Sair</Link></li>
                     </ul>
                 </nav>
@@ -165,26 +166,6 @@ const Cadastro = () => {
                             readOnly 
                         />
                     </div>
-                   {/*  <div className={styles.formGroup}>
-                        <label>Latitude:</label>
-                        <input 
-                            type="text" 
-                            name="latitude" 
-                            value={formData.latitude} 
-                            onChange={handleInputChange} 
-                            readOnly 
-                        />
-                    </div>
-                    <div className={styles.formGroup}>
-                        <label>Longitude:</label>
-                        <input 
-                            type="text" 
-                            name="longitude" 
-                            value={formData.longitude} 
-                            onChange={handleInputChange} 
-                            readOnly 
-                        />
-                    </div> */}
                     <button type="submit" className={styles.submitButton}>Cadastrar</button>
                 </form>
             </main>

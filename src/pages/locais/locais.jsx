@@ -5,23 +5,22 @@ import './CadastroLocais.module.css';
 
 
 function CadastroLocais() {
-  const { id } = useParams(); // Pega o ID da URL, se houver
+  const { id } = useParams(); 
   const [local, setLocal] = useState({
     nomeLocal: '',
     descricaoLocal: '',
     endereco: '',
     latitude: '',
     longitude: '',
-    cep: '', // Adicionando o campo CEP
+    cep: '',
   });
   
 
   useEffect(() => {
     if (id) {
-      // Se houver um ID na URL, estamos no modo de edição
-      fetch(`http://localhost:3000/locais/${id}`)
+        fetch(`http://localhost:3000/locais/${id}`)
         .then((response) => response.json())
-        .then((data) => setLocal(data)) // Carrega os dados do local existente
+        .then((data) => setLocal(data)) 
         .catch((error) => console.error('Erro ao buscar local:', error));
     }
   }, [id]);
@@ -30,7 +29,7 @@ function CadastroLocais() {
     const { name, value } = e.target;
     setLocal({ ...local, [name]: value });
 
-    if (name === 'cep' && value.length === 8) { // Verifica se o CEP tem 8 dígitos
+    if (name === 'cep' && value.length === 8) { 
       try {
         const response = await fetch(`https://cep.awesomeapi.com.br/json/${value}`);
         const data = await response.json();
@@ -40,7 +39,7 @@ function CadastroLocais() {
           endereco: `${data.address}, ${data.district}, ${data.city} - ${data.state}`,
           latitude: data.lat,
           longitude: data.lng,
-          cep: value, // Mantém o CEP atualizado
+          cep: value, 
         });
       } catch (error) {
         console.error('Erro ao buscar informações do CEP:', error);
@@ -50,7 +49,7 @@ function CadastroLocais() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const method = id ? 'PUT' : 'POST'; // Usa PUT para edição e POST para criação
+    const method = id ? 'PUT' : 'POST'; 
     const url = id
       ? `http://localhost:3000/locais/${id}`
       : 'http://localhost:3000/locais';
@@ -61,15 +60,15 @@ function CadastroLocais() {
       body: JSON.stringify(local),
     })
       .then(() => {
-        alert('Cadastro de local realizado com sucesso!'); // Exibe o alerta
-        // Limpa o formulário após o alerta, se necessário
+        alert('Cadastro de local realizado com sucesso!')
+        
         setLocal({
           nome: '',
           descricao: '',
           endereco: '',
           latitude: '',
           longitude: '',
-          cep: '', // Limpa o campo CEP
+          cep: '', 
         });
       })
       .catch((error) => console.error('Erro ao salvar local:', error));
@@ -116,7 +115,7 @@ function CadastroLocais() {
               value={local.cep}
               onChange={handleChange}
               required
-              maxLength="8" // Garante que o CEP terá no máximo 8 dígitos
+              maxLength="8" 
             />
           </div>
           <div className="formGroup">
@@ -127,7 +126,7 @@ function CadastroLocais() {
               value={local.endereco}
               onChange={handleChange}
               required
-              readOnly // Torna o campo de endereço somente leitura
+              readOnly 
             />
           </div>
           <div className="formGroup">
@@ -137,7 +136,7 @@ function CadastroLocais() {
               name="latitude"
               value={local.latitude}
               onChange={handleChange}
-              readOnly // Torna o campo de latitude somente leitura
+              readOnly 
             />
           </div>
           <div className="formGroup">
@@ -147,7 +146,7 @@ function CadastroLocais() {
               name="longitude"
               value={local.longitude}
               onChange={handleChange}
-              readOnly // Torna o campo de longitude somente leitura
+              readOnly 
             />
           </div>
           <button type="submit" className="submitButton">

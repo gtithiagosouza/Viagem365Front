@@ -8,8 +8,7 @@ function ListaLocais() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetching data from db.json
-    fetch('http://localhost:3000/locais')
+       fetch('http://localhost:3000/locais')
       .then(response => response.json())
       .then(data => setLocais(data))
       .catch(error => console.error('Erro ao buscar locais:', error));

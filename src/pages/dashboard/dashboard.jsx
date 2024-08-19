@@ -16,7 +16,7 @@ const Dashboard = () => {
                 console.error("Locais não encontrados");
             }
         } catch (error) {
-            console.error("Erro ao buscar locais", error);
+            console.error("Erro ao localizar locais", error);
         }
     }
 

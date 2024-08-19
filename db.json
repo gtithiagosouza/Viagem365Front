@@ -113,6 +113,30 @@
       "latitude": "-27.62369",
       "longitude": "-48.63296",
       "id": 11
+    },
+    {
+      "nome": "Pedro",
+      "sexo": "Masculino",
+      "cpf": "77777777777777777777777",
+      "dataNascimento": "1985-02-02",
+      "email": "pedro@pedro.com.br",
+      "password": "12333",
+      "cep": "88104005",
+      "endereco": "Rua Romanos Goedert, Fazenda Santo Antônio, São José - SC",
+      "latitude": "-27.62369",
+      "longitude": "-48.63296",
+      "id": 12
+    },
+    {
+      "nome": "admin",
+      "sexo": "Masculino",
+      "cpf": "0000000000000",
+      "dataNascimento": "1900-01-01",
+      "email": "admin@admin.com.br",
+      "password": "123456",
+      "cep": "11111111",
+      "endereco": "undefined, undefined, undefined - undefined",
+      "id": 13
     }
   ],
   "locais": [
